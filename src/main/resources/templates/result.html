@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="App.css" />
+</head>
+<body>
+    <h2>Extracted Text:</h2>
+    <p th:text="${extractedText}"></p>
+
+    <h2>Processed Image:</h2>
+    <img th:src="${maskedImageData}" th:alt="Processed Image" />
+
+    <h2>Download Masked Image:</h2>
+    <a th:href="@{/downloadMasked/{filename}(filename=${maskedImageFilename})}">Download</a>
+</body>
+</html>
+ -->
+ 
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Result</title>
+</head>
+
+<body>
+    <h1>Extracted Text</h1>
+    <p th:text="${extractedText}"></p>
+
+    <h2>Processed Image</h2>
+    <img th:src="${maskedImageData}" th:alt="${maskedImageFilename}" />
+
+    <h2>Download</h2>
+    <a th:href="@{/downloadMasked/__${maskedImageFilename}__}">Download Masked Image</a>
+</body>
+</html>
+ 
